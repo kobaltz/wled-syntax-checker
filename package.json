@@ -1,0 +1,58 @@
+{
+  "name": "wled-syntax-checker",
+  "displayName": "WLED Syntax Checker",
+  "description": "Change WLED light colors based on syntax errors",
+  "version": "0.1.0",
+  "engines": { "vscode": "^1.78.0" },
+  "categories": ["Other"],
+  "activationEvents": [
+    "onLanguage"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kobaltz/wled-syntax-checker"
+  },
+  "icon": "WLED.png",
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "WLED Syntax Error",
+      "properties": {
+        "wled-syntax-checker.IPAddress": {
+          "type": "string",
+          "default": "",
+          "description": "IP address of your WLED device"
+        },
+        "wled-syntax-checker.Brightness": {
+          "type": "number",
+          "default": "128",
+          "description": "Brightness [0-255] of your LEDs"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.78.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "@vscode/test-electron": "^2.3.0",
+    "eslint": "^8.39.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "wled": "^1.1.0"
+  }
+}
