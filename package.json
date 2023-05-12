@@ -3,7 +3,7 @@
   "displayName": "WLED Syntax Checker",
   "description": "Change WLED light colors based on syntax errors",
   "version": "0.1.1",
-  "publisher": "WLEDSyntaxChecker",
+  "publisher": "kobaltz",
   "engines": { "vscode": "^1.60.0" },
   "categories": ["Other"],
   "activationEvents": [
