@@ -2,9 +2,9 @@
   "name": "wled-syntax-checker",
   "displayName": "WLED Syntax Checker",
   "description": "Change WLED light colors based on syntax errors",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "WLEDSyntaxChecker",
-  "engines": { "vscode": "^1.78.0" },
+  "engines": { "vscode": "^1.60.0" },
   "categories": ["Other"],
   "activationEvents": [
     "onLanguage"
